@@ -48,6 +48,38 @@ Now we can ls the current directory we are in and get the user.txt flag
 
 <img width="493" height="228" alt="image" src="https://github.com/user-attachments/assets/b8ac1a3d-9b30-42a2-b245-1010b64db8b8" />
 
+## Privilege Escalation
+The next step in order to complete and compromise the machine we need to access the root user from a normal user. This is called the privilege escalation.
+So we start with a very basic PrivEsc Enumeration 
+
+The command below shows us what files can be used in order to escalate privileges from a standard user to a root user without a password
+sudo -l 
+<img width="719" height="89" alt="image" src="https://github.com/user-attachments/assets/edc401af-d8f2-4ed7-ae28-b525695f0449" />
+
+Looks like bak.py can be run as root user, but the user can’t edit it. 
+We will have to delete the file and make a new one with the same name. Then in the new file we can code to get a shell of the root user
+
+<img width="554" height="387" alt="image" src="https://github.com/user-attachments/assets/c7541864-07d5-428e-84eb-cdb683f260dd" />
+
+ANNDDD HEEREE we have the root flag and hence compromising the machine entirely.
+
+## Real World TakeAways
+- 🔑 Always Run sudo -l
+Many Linux privilege escalations begin and end with this single command.
+
+- 🔑 NOPASSWD Is Dangerous
+Any passwordless sudo rule significantly increases attack surface.
+
+- 🔑 Scripts + sudo = High Risk
+Allowing scripts (especially Python) to run as root is extremely dangerous unless properly sandboxed.
+
+## Conclusion
+This privilege escalation did not rely on kernel exploits or advanced techniques. Instead, it exploited a simple but severe misconfiguration — a passwordless sudo rule allowing execution of a Python script.
+
+
+
+
+
 
 
 
