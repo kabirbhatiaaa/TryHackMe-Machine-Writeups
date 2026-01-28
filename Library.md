@@ -1,6 +1,6 @@
 ## 🧠 TryHackMe – Library
-Difficulty: Easy
-Focus: Enumeration, Web Credentials, SSH, Linux Privilege Escalation
+- Difficulty: Easy
+- Focus: Enumeration, Web Credentials, SSH, Linux Privilege Escalation
 
 ## Enumeration
 Every pentester starts with mapping the attack surface and conducting enumeration. I began by conducting a full TCP scan to identify open ports and services
