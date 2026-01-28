@@ -11,7 +11,7 @@ nmap -vv -sC -sV <ip address>
 
 Analysis:
 There are two open ports: 
-port 22, suggesting remote shell access at a later stage 
+port 22, suggesting remote shell access at a later stage\n 
 port 80, suggesting the most likely inital entry point
 
 ## Web Application Enumeration
