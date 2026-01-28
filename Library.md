@@ -54,6 +54,7 @@ So we start with a very basic PrivEsc Enumeration
 
 The command below shows us what files can be used in order to escalate privileges from a standard user to a root user without a password
 sudo -l 
+
 <img width="719" height="89" alt="image" src="https://github.com/user-attachments/assets/edc401af-d8f2-4ed7-ae28-b525695f0449" />
 
 Looks like bak.py can be run as root user, but the user can’t edit it. 
